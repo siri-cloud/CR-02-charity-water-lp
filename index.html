@@ -155,6 +155,14 @@
       font-size: 0.9rem;
     }
 
+    /* ===== Header Styles ===== */
+    header {
+      background-color: #003366;
+      padding: 1rem 2rem;
+      position: relative;
+      z-index: 1000;
+    }
+
     /* ===== Responsive Sections ===== */
     @media (min-width: 700px) {
       .steps { grid-template-columns: repeat(3, 1fr); }
@@ -170,6 +178,12 @@
   </style>
 </head>
 <body>
+  <!-- Header with logo at the top left -->
+  <header>
+    <!-- The logo image is inside the img folder -->
+    <img src="img/cw_logo-2.png" alt="Charity: Water Logo">
+  </header>
+
   <!-- Hero Section -->
   <main class="hero">
     <section class="left">
@@ -178,7 +192,7 @@
       <a href="https://donate.charitywater.org/" target="_blank" rel="noopener noreferrer" class="btn">Donate Now</a>
     </section>
     <section class="right">
-      <img src="https://images.unsplash.com/photo-1495107334309-fcf20504a5ab?auto=format&fit=crop&w=1200&q=80" alt="Child drinking clean water from a tap" />
+      <img src="Hero.png" alt="Hero image showing girl drinking clean water" />
     </section>
   </main>
 
@@ -208,8 +222,8 @@
 
   <!-- Real Impact: Meet Amina Section -->
   <section class="section-light" style="background-color: #77A8BB; color: #fff; padding: 6rem 4rem;" id="real-impact">
-  <div class="container" style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap;">
-    <img src="/mnt/data/Screenshot 2025-06-14 at 21-35-51 Nepal_JS_20170301_033622 - @charitywater shareable favorites.png" style="border-radius: 8px; max-width: 400px; width: 100%; height: auto;" />
+  <div class="container" style="display: flex; flex-direction: row; align-items: center; justify-content: flex-start; gap: 3rem; flex-wrap: wrap;">
+    <img src="MeetAmina.png" alt="Amina collecting clean water" style="border-radius: 8px; max-width: 400px; width: 100%; height: auto;" />
     <div style="max-width: 500px; text-align: left;">
       <h2>Real Impact: Meet Amina</h2>
       <p style="font-size: 1.1rem; line-height: 1.6;">
@@ -274,11 +288,11 @@
           <p>100% of your donation funds clean water projects thanks to private donors covering our operating costs.</p>
         </div>
         <div class="step">
-          <h3>2. We Build</h3>
+          <h3 style="font-family: 'Proxima Nova', 'Inter', Arial, sans-serif;">2. We Build</h3>
           <p>Local partners build sustainable water projects tailored to community needs.</p>
         </div>
         <div class="step">
-          <h3>3. We Prove</h3>
+          <h3 style="font-family: 'Proxima Nova', 'Inter', Arial, sans-serif;">3. We Prove</h3>
           <p>You receive GPS coordinates, photos, and updates so you see exactly where your money goes.</p>
         </div>
       </div>

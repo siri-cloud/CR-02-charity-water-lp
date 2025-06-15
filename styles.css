@@ -136,6 +136,17 @@ section {
   margin-bottom: 20px;
 }
 
+/* Style the header to add some space around the logo */
+header {
+  padding: 16px;
+}
+
+/* Make sure the logo image stays on the left and is not too big */
+header img {
+  display: block;
+  height: 60px; /* You can change this number to make the logo bigger or smaller */
+}
+
 /* 
   Media Queries for Responsive Design
   Media queries help make your website look good on different screen sizes,
