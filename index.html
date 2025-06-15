@@ -1,47 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charity: Water – Landing Page</title>
+  <!-- Google Fonts (fallbacks for web-safe) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* ===== Reset & Base Styles ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Proxima Nova', 'Inter', Arial, sans-serif;
+      line-height: 1.6;
+      color: #ffffff;
+      background-color: #003366; /* Brand blue for hero text panel */
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    h2 {
+      font-family: 'Bauer Bodoni', 'Times New Roman', serif;
+      font-size: clamp(1.8rem, 3vw + 0.8rem, 2.5rem);
+      margin-bottom: 1rem;
+    }
+
+    /* ===== Hero Layout ===== */
+    .hero {
+      display: flex;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .left, .right {
+      flex: 1 1 50%;
+    }
+
+    .left {
+      background-color: #003366;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 3rem 6%;
+    }
+
+    h1 {
+      font-family: 'Bauer Bodoni', 'Times New Roman', serif;
+      font-size: clamp(2.2rem, 4vw + 1rem, 3.5rem);
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .tagline {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      max-width: 450px;
+    }
+
+    .btn {
+      background-color: #FFC907;
+      color: #000;
+      font-weight: 600;
+      padding: 0.8rem 2rem;
+      border-radius: 4px;
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    .btn:hover { opacity: 0.85; }
+
+    .right { position: relative; }
+
+    .right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* ===== Scroll Sections ===== */
+    .section-light {
+      background-color: #FFF7E1;
+      color: #333;
+      padding: 4rem 8%;
+      text-align: center;
+    }
+
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    /* Impact stats grid */
+    .stats-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 2.5rem;
+    }
+
+    .stat {
+      flex: 1 1 200px;
+    }
+
+    .number {
+      display: block;
+      font-family: 'Bauer Bodoni', 'Times New Roman', serif;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .label {
+      font-size: 0.95rem;
+      font-family: 'Proxima Nova', 'Inter', Arial, sans-serif;
+    }
+
+    /* How it works */
+    .steps {
+      display: grid;
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .step {
+      background: #CBCCD1;
+      color: #333;
+      padding: 1.5rem;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    .step h3 {
+      font-family: 'Bauer Bodoni', 'Times New Roman', serif;
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #1c2a33;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    /* ===== Responsive Sections ===== */
+    @media (min-width: 700px) {
+      .steps { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 900px) {
+      .hero { flex-direction: column; }
+      .left, .right { flex: 1 1 100%; }
+      .left { padding: 2.5rem 8%; text-align: center; }
+      h1 { font-size: 2rem; }
+      .tagline { margin: 0 auto 2rem; }
+    }
+  </style>
 </head>
 <body>
-    <!-- Hero Section: This is the main banner at the top of the page -->
-    <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
+  <!-- Hero Section -->
+  <main class="hero">
+    <section class="left">
+      <h1>Water Shouldn’t Be a Luxury</h1>
+      <p class="tagline">You have the power to change that. Every dollar you give brings clean water to communities in need, and you’ll see exactly where it goes through real updates, photos, and GPS tracking.</p>
+      <a href="https://donate.charitywater.org/" target="_blank" rel="noopener noreferrer" class="btn">Donate Now</a>
     </section>
-
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
-        <p>
-         
+    <section class="right">
+      <img src="https://images.unsplash.com/photo-1495107334309-fcf20504a5ab?auto=format&fit=crop&w=1200&q=80" alt="Child drinking clean water from a tap" />
     </section>
+  </main>
 
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
+  <!-- Our Mission Section -->
+  <section class="section-light" style="background-color: #77A8BB; color: #fff;" id="our-mission">
+    <div class="container">
+      <h2>Our Mission</h2>
+      <p>
+        At charity: water, our mission is simple: to bring clean and safe drinking water to people in developing countries. 
+        We believe in a world where everyone has access to life’s most basic need. We’re committed to transparency, 
+        innovation, and empowering local communities with sustainable solutions.
+      </p>
+    </div>
+  </section>
+
+  <!-- Why Water Section -->
+  <section class="section-light" style="background-color: #ffffff;" id="why-water">
+    <div class="container">
+      <h2>Why Water?</h2>
+      <p>
+        Water is essential to life, yet over 703 million people around the world lack access to clean water. 
+        Without it, communities face countless challenges — from poor health and hunger to limited education and economic opportunities. 
+        Clean water not only saves lives, it creates opportunities for a better future.
+      </p>
+    </div>
+  </section>
+
+  <!-- Real Impact: Meet Amina Section -->
+  <section class="section-light" style="background-color: #77A8BB; color: #fff; padding: 6rem 4rem;" id="real-impact">
+  <div class="container" style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap;">
+    <img src="/mnt/data/Screenshot 2025-06-14 at 21-35-51 Nepal_JS_20170301_033622 - @charitywater shareable favorites.png" style="border-radius: 8px; max-width: 400px; width: 100%; height: auto;" />
+    <div style="max-width: 500px; text-align: left;">
+      <h2>Real Impact: Meet Amina</h2>
+      <p style="font-size: 1.1rem; line-height: 1.6;">
+        Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well.
+        Amina can go to school and her family is healthier and happier.
+      </p>
+    </div>
+  </div>
+</section>
+
+  <!-- Impact Section -->
+  <section class="section-light" style="background-color: #ffffff; color: #333;" id="impact">
+    <div class="container">
+      <h2>Clean Water Transforms Lives</h2>
+      <p>Access to safe water means education, income and health—especially for women and kids.</p>
+      <div class="stats-grid">
+        <div class="stat">
+          <span class="number">111,386</span>
+          <span class="label">Water Projects Funded</span>
         </div>
-    </section>
+        <div class="stat">
+          <span class="number">15.5&nbsp;M+</span>
+          <span class="label">People Served Worldwide</span>
+        </div>
+        <div class="stat">
+          <span class="number">29</span>
+          <span class="label">Countries Reached</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
-    </section>
+  <!-- Who We've Helped So Far Section -->
+  <section class="section-light" style="background-color: #77A8BB; color: #fff;" id="who-we-helped">
+    <div class="container">
+      <h2>Who We've Helped So Far</h2>
+      <p>Millions of people across 29 countries now have access to clean, safe drinking water—thanks to generous donors like you.</p>
+      <div class="stats-grid">
+        <div class="stat">
+          <span class="number">Ethiopia</span>
+          <span class="label">Rural villages now have sustainable wells and clean water taps.</span>
+        </div>
+        <div class="stat">
+          <span class="number">India</span>
+          <span class="label">Entire communities uplifted by rainwater harvesting systems.</span>
+        </div>
+        <div class="stat">
+          <span class="number">Uganda</span>
+          <span class="label">Children spend more time in school and less time collecting water.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="section-light" style="background-color: #ffffff; color: #333;" id="how-it-works">
+    <div class="container">
+      <h2>How Your Donation Works</h2>
+      <div class="steps">
+        <div class="step">
+          <h3 style="font-family: 'Proxima Nova', 'Inter', Arial, sans-serif;">1. You Give</h3>
+          <p>100% of your donation funds clean water projects thanks to private donors covering our operating costs.</p>
+        </div>
+        <div class="step">
+          <h3>2. We Build</h3>
+          <p>Local partners build sustainable water projects tailored to community needs.</p>
+        </div>
+        <div class="step">
+          <h3>3. We Prove</h3>
+          <p>You receive GPS coordinates, photos, and updates so you see exactly where your money goes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Make a Difference Section -->
+  <section class="section-light" style="background-color: #FFC907; color: #000; text-align: center; padding: 4rem 2rem;">
+    <div class="container">
+      <h2 style="font-family: 'Bauer Bodoni', 'Times New Roman', serif; font-size: 2rem; margin-bottom: 1rem;">Make a Difference</h2>
+      <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto 2rem;">
+        Your support helps transform lives around the world. Every contribution brings us closer to a future where everyone has access to clean water.
+      </p>
+      <a href="https://donate.charitywater.org/" target="_blank" rel="noopener noreferrer" class="btn" style="background-color: #003366; color: #fff; font-weight: bold;">Donate Now</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; <span id="year"></span> Charity: Water. All rights reserved.
+  </footer>
+
+  <script>
+    // Dynamic year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
